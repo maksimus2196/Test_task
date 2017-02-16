@@ -3,8 +3,8 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.use(express.static(path.join('public', 'test.html')));
-next();
+  res.render('index', { title: 'Twitter' });
+  next();
 });
 
 module.exports = router;
